@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class NewYearDaysCounter {
     public static void main(String[] args) {
-        System.out.println(NewYearDaysCount());
+        System.out.println(newYearDaysCount());
     }
 
     public static LocalDate getDateInput() {
@@ -17,7 +17,7 @@ public class NewYearDaysCounter {
         return LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
-    public static int NewYearDaysCount() {
+    public static int newYearDaysCount() {
         LocalDate newYear = LocalDate.of(2021, 1, 1);
         Period period = Period.between(getDateInput(), newYear);
         return period.getDays();
